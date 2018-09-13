@@ -7,22 +7,17 @@
  */
 int main(void)
 {
-	char alpha = 'a';
+	int alpha = 97;
 
-	while (alpha <= '{')
-		if ((alpha != ('{')) || (alpha != ('{')))
-		{
-			putchar(alpha);
-			alpha++;
-		}
-		else if (alpha = '\[')
-		{
-			alpha = 'A';
-		}
-		else
-		{
-			continue
-		}
+	for (alpha = 97 ; alpha <= 122 ; alpha++)
+	{
+		putchar(alpha);
+	}
+	
+	for (alpha = 65 ; alpha <= 90 ; alpha++)
+	{
+		putchar(alpha);
+	}
 
 	putchar('\n');
 
