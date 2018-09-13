@@ -9,20 +9,14 @@ int main(void)
 {
 	char alpha;
 
-	for (alpha = '0' ; alpha <= 'f' ; alpha++)
+	for (alpha = '0' ; alpha <= '9' ; alpha++)
 	{
-		if ((alpha <= 9))
-		{	
-			putchar(alpha);
-		}
-		else if (alpha == 10)
-		{
-			alpha = 'a';
-		}
-		else
-		{
-			continue;
-		}
+		putchar(alpha);
+	}
+
+	for (alpha = 'a' ; alpha <= 'f' ; alpha++)
+	{
+		putchar(alpha);
 	}
 
 	putchar('\n');
