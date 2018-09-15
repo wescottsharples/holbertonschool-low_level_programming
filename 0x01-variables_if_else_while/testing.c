@@ -7,18 +7,21 @@
  */
 int main(void)
 {
-	int num;
-	int num2 = 1;
+	int i;
+	int j;
 
-	for (num = 0 ; num <= 1000 ; num++)
+	for (i = 0 ; i <= 98 ; i++)
 	{
-		putchar((num / 10) + '0');
-		putchar((num % 10) + '0');
+		for (j = i + 1 ; j <= 99 ; j++)
+		{
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
 
-		putchar((32));
+			putchar(' ');
 
-		putchar((num / 10) + '0');
-		putchar((num % 10) + '0');
+			putchar((j / 10) + '0');
+			putchar((j % 10) + '0');
+		}
 	}
 
 	putchar('\n');
