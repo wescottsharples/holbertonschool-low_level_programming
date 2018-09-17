@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * print_alphabet - prints the lowercase alphabet.
  *
