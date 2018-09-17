@@ -1,7 +1,7 @@
 /**
- * main - check the code for Holberton School students.
+ * _isalpha - checks is the input is an alphabetical character.
  *
- * Return: Always 0.
+ * Return: Always 1 or 0.
  */
 int _isalpha(int c)
 {
