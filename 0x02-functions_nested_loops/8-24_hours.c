@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * jack_bauer - print every minute in 00:00 format from 00:00 to 23:59.
  *
- * Return: Always 0.
+ * Return: none.
  */
 void jack_bauer(void)
 {
@@ -22,4 +22,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-}		
+}
