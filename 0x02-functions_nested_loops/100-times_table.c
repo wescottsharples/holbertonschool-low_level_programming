@@ -7,6 +7,8 @@
  */
 void print_single_digit(void)
 {
+	int k;
+
 	if (k <= 9)
 	{
 		_putchar(k + '0');
@@ -37,6 +39,8 @@ void print_single_digit(void)
  */
 void print_multiple_digit(void)
 {
+	int k;
+
 	if (k <= 9)
 	{
 		_putchar(k + '0');
