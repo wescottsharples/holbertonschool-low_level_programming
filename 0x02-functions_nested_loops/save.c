@@ -1,18 +1,22 @@
 #include "holberton.h"
 
 /**
- * print_single_digit - prints a single digit numerical character.
- * @k: Single digit int that you want to print
+ * print_digits - prints the digits.
+ * @k: Product of i and j
+ * @i: Variable to keep track of rows
+ * @j: Variable to keep track of columns
  * Return: none.
  */
-void print_single_digit(int k)
+void print_digits(int k, int i, int j)
 {
 	if (k <= 9)
 	{
 		_putchar(k + '0');
 		_putchar(',');
 		_putchar(' ');
-		_putchar(' ');
+
+		if ((i * (j + 1)) <= 9)
+			_putchar(' ');
 	}
 	else
 	{
@@ -42,7 +46,7 @@ void times_table(void)
 
 			if (j != 9)
 			{
-				print_single_digit(k);
+				print_digits(k, i, j);
 			}
 			else
 			{
