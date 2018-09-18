@@ -6,16 +6,17 @@ void fibonacci(void)
 	unsigned long int total = 0;
 	unsigned long int a = 1;
 	unsigned long int b = 2;
+	unsigned long int c = 0;
 
 	while (a < 4000000 && b < 4000000)
 	{
 		if (a < b)
 		{
-			a = a + b;
+			c = a + b;
 		}
 		else if (a > b)
 		{
-			b = b + a;
+			c = b + a;
 		}
 
 		for (counter = 0; counter < 3; counter++)
