@@ -1,19 +1,23 @@
 #include "holberton.h"
 
 /**
- * print_single_digit - print the digit for a single digit number.
- *
+ * print_digits_with_space - print the digits with a space and comma
+ * @k: the produce of i and j
+ * @i: keeps track of rows
+ * @j: keeps track of columns
  * None.
  */
-void print_single_digit(void)
+void print_digits_with_space(int k, int i, int j)
 {
-	int k;
-
 	if (k <= 9)
 	{
 		_putchar(k + '0');
 		_putchar(',');
 		_putchar(' ');
+		_putchar(' ');
+
+		if ((i * (j + 1)) <= 9)
+			_putchar(' ');
 	}
 	else if (k >= 100)
 	{
@@ -29,18 +33,19 @@ void print_single_digit(void)
 		_putchar(k % 10 + '0');
 		_putchar(',');
 		_putchar(' ');
+
+		if ((i * (j + 1)) <= 99)
+			_putchar(' ');
 	}
 }
 
 /**
  * print_multiple_digit - printing a multi-digit character.
- *
+ * @k: the product of i and j
  * Return: none
  */
-void print_multiple_digit(void)
+void print_digits_only(int k)
 {
-	int k;
-
 	if (k <= 9)
 	{
 		_putchar(k + '0');
@@ -79,11 +84,11 @@ void print_times_table(int n)
 
 				if (j != n)
 				{
-					print_single_digit();
+					print_digits_with_space(k, i, j);
 				}
 				else
 				{
-					print_multiple_digit();
+					print_digits_only(k);
 				}
 			}
 
