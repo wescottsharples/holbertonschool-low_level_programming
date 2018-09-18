@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * fibonacci - print the fibonacci sequence up to 50 terms.
+ *
+ * Return: Nothing.
+ */
 void fibonacci(void)
 {
 	int i;
@@ -29,9 +34,14 @@ void fibonacci(void)
 	}
 }
 
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	fibonacci();
 	putchar('\n');
-	return(0);
+	return (0);
 }
