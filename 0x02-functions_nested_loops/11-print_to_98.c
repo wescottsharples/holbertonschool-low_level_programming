@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_to_98 - prints down or up to the number 98.
+ * @n: The number that you want to start from and go to 98
+ * Return: none.
  */
 void print_to_98(int n)
 {
@@ -13,7 +13,7 @@ void print_to_98(int n)
 		while (n >= 98)
 		{
 			printf("%d", n);
-			
+
 			if (n != 98)
 			{
 				putchar(',');
