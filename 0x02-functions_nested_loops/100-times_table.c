@@ -40,7 +40,7 @@ void print_digits_with_space(int k, int i, int j)
 }
 
 /**
- * print_multiple_digit - printing a multi-digit character.
+ * print_digits_only - prints digits without any characters after.
  * @k: the product of i and j
  * Return: none
  */
