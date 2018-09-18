@@ -8,15 +8,15 @@
 int main(void)
 {
 	int n;
-	int i;
-	int j;
+	int b;
+	int c;
 
 	n = 1024;
 	j = 0;
 
-	for (i = i; i <= n; i++)
+	for (a = i; a <= n; a++)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
+		if (a % 3 == 0 || a % 5 == 0)
 		{
 			j = (j + i);
 			printf("%d\n", j);
