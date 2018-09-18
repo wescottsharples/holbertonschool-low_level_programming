@@ -12,6 +12,7 @@ void print_single_digit(int k)
 		_putchar(k + '0');
 		_putchar(',');
 		_putchar(' ');
+		_putchar(' ');
 	}
 	else
 	{
