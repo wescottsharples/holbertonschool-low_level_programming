@@ -7,7 +7,6 @@
  */
 void fibonacci(void)
 {
-	int i;
 	unsigned long int c;
 	unsigned long int total = 0;
 	unsigned long int a = 0;
@@ -20,7 +19,7 @@ void fibonacci(void)
 		b = c;
 
 		if (c % 2 == 0)
-			total = total + c;
+			printf("%lu\n", c);
 	}
 
 	printf("%lu", total);

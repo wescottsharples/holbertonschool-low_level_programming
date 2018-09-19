@@ -7,7 +7,6 @@
  */
 void fibonacci(void)
 {
-	int i;
 	unsigned long int c;
 	unsigned long int total = 0;
 	unsigned long int a = 0;
