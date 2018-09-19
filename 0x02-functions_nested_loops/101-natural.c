@@ -7,19 +7,17 @@
  */
 int main(void)
 {
-	int n;
-	int b;
-	int c;
+	int i;
+	int total;
 
-	n = 1024;
-	j = 0;
-
-	for (a = i; a <= n; a++)
+	for (i = 0; i <= 1024; i++)
 	{
-		if (a % 3 == 0 || a % 5 == 0)
+		if (((i % 3) == 0) || ((i % 5) == 0))
 		{
-			j = (j + i);
-			printf("%d\n", j);
+			total = total + i;
 		}
 	}
+
+	printf("%d\n", total);
+	return (0);
 }
