@@ -13,7 +13,7 @@ int main(void)
 	unsigned long total1, total2, a1 = 1, b1 = 2, a2 = 0, b2 = 0;
 	int i, overflow;
 	/*Printing the first two numbers*/
-	printf("%li, %li, ", a1, b1);
+	printf("%lu, %lu, ", a1, b1);
 	/*Breaking the numbers into parts*/
 	for (i = 0; i < 96; i++)
 	{
@@ -26,9 +26,9 @@ int main(void)
 		/*Printing the numbers by combining constituents*/
 		total2 = a2 + b2 + overflow;
 		if (total2 > 0)
-			printf("%li%li", total2, total1);
+			printf("%lu%07lu", total2, total1);
 		else
-			printf("%li", total1);
+			printf("%lu", total1);
 		/*Setting my variables for next iteration*/
 		overflow = 0;
 		a1 = b1;
