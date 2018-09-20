@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_number - prints the integer n.
+ * @n: the integer to be printed
+ * Return: Always 0.
+ */
 void print_number(int n)
 {
 	if (n < 0)
