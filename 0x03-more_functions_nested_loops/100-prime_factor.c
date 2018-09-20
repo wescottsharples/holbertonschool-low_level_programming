@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	long long n = 612852475143;
-	long long factor, i = 2;
+	long n = 612852475143;
+	long factor, i = 2;
 
 	while (n != 0)
 	{
@@ -21,7 +21,7 @@ int main(void)
 
 			if (n == 1)
 			{
-				printf("%lli\n", factor);
+				printf("%li\n", factor);
 				break;
 			}
 		}
