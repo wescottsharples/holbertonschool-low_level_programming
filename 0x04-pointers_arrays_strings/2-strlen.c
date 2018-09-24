@@ -1,15 +1,16 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - updates the value of n's variable to 98.
- *
- * Return: None.
+ * _strlen - returns the length of a string.
+ * @s: the string you want to return the length of
+ * Return: Integer of string's length.
  */
 int _strlen(char *s)
 {
-	int string_size, string_length;
+	int i = 0;
 
-	string_size = sizeof(*s);
-	string_length = (string_size / 1) - 1;
-	return string_length;
+	while (*s++)
+		i++;
+
+	return (i);
 }
