@@ -1,17 +1,17 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - updates the value of n's variable to 98.
- *
+ * _puts - prints the value of a string to standard output.
+ * @str: the string you want to print out
  * Return: None.
  */
 void _puts(char *str)
 {
-	int i;
+	_putchar(*str);
 
-	for (i = 0; i == '\0'; i++)
+	while (*str++)
 	{
-		_putchar(*str[i]);
+		_putchar(*str);
 	}
 
 	_putchar('\n');
