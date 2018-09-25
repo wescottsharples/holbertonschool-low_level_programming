@@ -1,23 +1,28 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * reset_to_98 - updates the value of n's variable to 98.
- *
+ * rev_string - reverses a string
+ * @s: the string we are reversing
  * Return: None.
  */
 void rev_string(char *s)
 {
-	int string_size, string_length;
-	int i;
+	int i, j, k;
+	char c;
 
-	string_size = sizeof(*s);
-	string_length = (string_size / 1) - 1;
+	while (*(s + i) != '\0')
+		i++;
 
-	char reverse_array[string_length];
+	i -= 1;
 
+	k = 0;
 
-	for (i = size_length; i >= 0; i--)
+	for (j = i; j > k; j--)
 	{
-		reverse_array[i] = (*s[i]);
+		c = s[k];
+		s[k] = s[j];
+		k++;
+		s[j] = c;
 	}
 }
