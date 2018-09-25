@@ -9,7 +9,7 @@
  */
 int _atoi(char *s)
 {
-	int final = 0;
+	unsigned int final = 0;
 	int norp = 1;
 	int i = 0;
 
