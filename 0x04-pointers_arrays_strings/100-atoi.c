@@ -13,24 +13,27 @@ int _atoi(char *s)
 	int norp = 1;
 	int i = 0;
 
-	while (s[i] != '\0')
+	if (s[0])
 	{
-		if (s[i] == '-')
+		while (s[i] != '\0')
 		{
-			norp = norp * -1;
-		}
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			final = (final * 10) + (s[i] - '0');
-
-			if (s[i + 1] < '0' || s[i + 1] > '9')
+			if (s[i] == '-')
 			{
-			break;
+				norp = norp * -1;
 			}
-		}
 
-		i++;
+			if (s[i] >= '0' && s[i] <= '9')
+			{
+				final = (final * 10) + (s[i] - '0');
+
+				if (s[i + 1] < '0' || s[i + 1] > '9')
+				{
+					break;
+				}
+			}
+
+			i++;
+		}
 	}
 
 	return (norp * final);
