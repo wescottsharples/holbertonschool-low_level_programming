@@ -33,5 +33,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	return (norp*final);
+	return (norp * final);
 }
