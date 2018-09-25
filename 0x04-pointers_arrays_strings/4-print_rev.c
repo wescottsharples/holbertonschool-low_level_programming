@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - updates the value of n's variable to 98.
- *
+ * print_rev - prints a string in reverse.
+ * @s: the string you would like to print in reverse
  * Return: None.
  */
 void print_rev(char *s)
