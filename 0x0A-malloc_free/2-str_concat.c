@@ -26,20 +26,21 @@ int _strlen(char *str)
 char *str_concat(char *s1, char *s2)
 {
 	int i, j = 0;
-	char *s3 = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	char *s3;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	s3 = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (s3 == NULL)
 		return (NULL);
 
 	for (i = 0; s1[i]; i++)
 		s3[i] = s1[i];
 
-	while (s2[j])
+	while (s2[j] || s3[i])
 	{
 		s3[i] = s2[j];
 		i++;
