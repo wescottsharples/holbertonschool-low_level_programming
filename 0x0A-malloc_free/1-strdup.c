@@ -1,6 +1,6 @@
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * _strdup - copy of the string given as a parameter
