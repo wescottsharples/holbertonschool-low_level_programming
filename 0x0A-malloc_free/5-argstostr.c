@@ -3,47 +3,34 @@
 #include <stdlib.h>
 
 /**
- * _strcpy - copies a string
- * @sent: d
- * @ac: d
- * @av: d
- * Return: Nothing.
- */
-void _strcpy(char *sent, int ac, char **av)
-{
-	int i, j, k;
-
-	j = k = 0;
-
-	for (i = 0; i < ac; i++, k++)
-	{
-		while (av[i][j])
-		{
-			sent[k] = av[i][j];
-			j++;
-			k++;
-		}
-
-		sent[k] = '\n';
-		j = 0;
-	}
-
-	sent[k] = '\0';
-}
-
-/**
- * argstostr - d
- * @ac: d
- * @av: d
- * Return: Pointer to sent, else NULL.
+ * argstostr - concatenates all arguments and adds newline characters
+ * @ac: the number of arguments
+ * @av: the arguments stored in a 2D array
+ * Return: Pointer to cancatenated string, else NULL.
  */
 char *argstostr(int ac, char **av)
 {
-	if (ac == 0 || av == NULL)
+	int i, j, c, len;
+	char *str;
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+			len++;
+		len++;
+	}
+
+	str = malloc(sizeof(char) * len);
+	if (!str)
 		return (NULL);
 
-	char *sent;
+	for (i = 0, c = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++, c++)
+			str[c] = av[i][j];
+		str[c] = '\n';
+		c++;
+	}
 
-	_strcpy(sent, ac, av);
-	return (sent);
+	return (str);
 }
