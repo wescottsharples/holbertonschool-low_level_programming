@@ -13,10 +13,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	char *buffer;
 
-	/* Check if nmemb or size is 0 */
-	if (!nmemb || !size)
-		return (NULL);
-
 	/* Initalize container array */
 	buffer = malloc(sizeof(char *) * nmemb * size);
 	if (!buffer)
