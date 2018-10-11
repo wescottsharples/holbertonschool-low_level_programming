@@ -32,12 +32,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	c_ptr = ptr;
 
 	/* Allocate memory for pointer of new block */
-	buffer = malloc(sizeof(char) * new_size);
+	buffer = malloc(new_size);
 	if (!buffer)
 		return (NULL);
 
+	/* Return buffer if pointer is NULL */
+	if (!ptr)
+		return (buffer);
+
 	/* Set new block memory to old block memory */
-	for (i = 0; i < old_size || buffer[i]; i++)
+	for (i = 0; i < old_size && i < new_size; i++)
 	{
 		buffer[i] = c_ptr[i];
 	}
