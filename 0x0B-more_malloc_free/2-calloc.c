@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	/* Initalize container array */
-	buffer = malloc(sizeof(char *) * nmemb * size);
+	buffer = malloc(sizeof(char) * (nmemb * size));
 	if (!buffer)
 		return (NULL);
 
