@@ -14,7 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *buffer;
 
 	/* Check if nmemb or size is 0 */
-	if (nmemb || size)
+	if (!nmemb || !size)
 		return (NULL);
 
 	/* Initalize container array */
