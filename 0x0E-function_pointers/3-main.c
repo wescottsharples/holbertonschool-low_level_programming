@@ -3,6 +3,13 @@
 #include "function_pointers.h"
 #include "3-calc.h"
 
+/**
+ * main - does a computation passed at command line
+ * @argc: the number of arguments
+ * @argv: an array containing string arguments
+ * Return: Result of computation on success
+ *         Error and exit status on failure
+ */
 int main(int argc, char *argv[])
 {
 	int result, num1, num2;
