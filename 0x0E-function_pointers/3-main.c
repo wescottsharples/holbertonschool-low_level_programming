@@ -9,7 +9,6 @@
  * @argv: an array containing string arguments
  * Return: Result of computation on success
  *         Error and exit status on failure
- */
 int main(int argc, char *argv[])
 {
 	int result, num1, num2;
@@ -39,3 +38,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", result);
 	return (result);
 }
+ */
