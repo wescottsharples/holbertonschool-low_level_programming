@@ -4,7 +4,7 @@
 
 /**
  * sum_them_all - returns the sum of all parameters.
- * @n: required unsigned integer argument
+ * @n: the number of integers passed to the function
  *
  * Return: The sum of all parameters.
  */
