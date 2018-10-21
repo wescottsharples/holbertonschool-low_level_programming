@@ -8,6 +8,11 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct print_anything - Struct maps data type to correct print function
+ * @type: The character that represents the correct data type
+ * @f: The print function that corresponds to the character
+ */
 typedef struct print_anything
 {
 	char *type;
