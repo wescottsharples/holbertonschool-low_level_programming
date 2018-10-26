@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "lists.h"
 
 void tortoise(void) __attribute__ ((constructor));
 
