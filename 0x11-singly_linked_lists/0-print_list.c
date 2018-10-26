@@ -2,6 +2,12 @@
 #include <stddef.h>
 #include "lists.h"
 
+/**
+ * print_list - Prints all elements of a 'list_t' list.
+ * @h: the head node of list
+ *
+ * Return: Number of nodes in list.
+ */
 size_t print_list(const list_t *h)
 {
 	int node_count = 0;
