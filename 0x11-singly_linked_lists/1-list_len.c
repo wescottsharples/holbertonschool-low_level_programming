@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * main - Returns the number of elements in a linked 'list_t' list.
+ * list_len - Returns the number of elements in a linked 'list_t' list.
  *
  * @h: address to the head node of list
  * Return: Number of elements.
