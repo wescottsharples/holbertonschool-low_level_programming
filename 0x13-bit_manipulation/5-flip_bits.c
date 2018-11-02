@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	xor_val = n ^ m;
 
 	for (xor_val = n ^ m; xor_val; xor_val >>= 1)
-		if (x & 1)
+		if (xor_val & 1)
 			i++;
 
 	return (i);
