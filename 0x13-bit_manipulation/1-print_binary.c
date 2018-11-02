@@ -8,20 +8,10 @@
  */
 void print_binary(unsigned long int n)
 {
-	int k, c, flag;
+	char c;
 
-	flag = 0;
-
-	for (c = 31; c >= 0; c--)
-	{
-		k = n >> c;
-
-		if (k & 1)
-		{
-			_putchar('1');
-			flag = 1;
-		}
-		else if (flag == 1 || c == 0)
-			_putchar('0');
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	c = (n & 1) + '0';
+	_putchar(c);
 }
