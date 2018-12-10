@@ -45,30 +45,39 @@ dlistint_t *insertion(dlistint_t *current, int n)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new, *current;
+	dlistint_t *new, *current, *prev;
 	unsigned int count;
 
 	current = *h;
 	count = 0;
 
+	if (count == idx)
+	{
+		new = insertion(current, n);
+		new->next = *h;
+		if (*h)
+			(*h)->prev = new;
+		*h = new;
+		return (new);
+	}
+
 	while (current && count <= idx)
 	{
 		if (count == idx)
-		{
-			new = insertion(current, n);
+			return (insertion(current, n));
 
-			if (idx == 0)
-				*h = new;
-
-			return (new);
-		}
-
+		prev = current;
 		current = current->next;
 		count++;
 	}
 
 	if (count == idx)
-		return (insertion(current, n));
+	{
+		new = insertion(current, n);
+		new->prev = prev;
+		prev->next = new;
+		return (new);
+	}
 
 	return (NULL);
 }
