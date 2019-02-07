@@ -17,7 +17,11 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-/* Function Prototypes */
+/* Sorting Function Prototypes */
 void bubble_sort(int *array, size_t size);
+
+/* Helper Function Prototypes */
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
 
 #endif /* __SORT_H__ */
