@@ -16,7 +16,7 @@ void bubble_sort(int *array, size_t size)
 	int tmp;
 	char flag = 1;
 
-	if (!*array)
+	if (!array || !*array)
 		return;
 
 	while (flag)
