@@ -13,6 +13,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *ptr, *tmp;
 
+	if (!list)
+		return;
+
 	for (ptr = *list; ptr; ptr = ptr->next)
 	{
 		tmp = ptr;
