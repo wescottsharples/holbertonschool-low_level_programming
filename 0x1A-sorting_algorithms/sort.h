@@ -20,9 +20,14 @@ typedef struct listint_s
 /* Sorting Function Prototypes */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
 
 /* Helper Function Prototypes */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+void pivot(int *array, int low, int high, int size);
+int partition(int *array, int low, int high, int size);
+void swap(int *a, int *b);
 
 #endif /* __SORT_H__ */
