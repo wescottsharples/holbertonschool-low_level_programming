@@ -5,5 +5,5 @@ NAME=holberton
 
 all: $(NAME)
 
-holberton: holberton.o main.o
+holberton: $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
