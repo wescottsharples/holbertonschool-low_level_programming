@@ -10,10 +10,10 @@ holberton: $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
 
 clean:
-	$(RM) -f $(NAME) $(OBJ)
+	$(RM) -f *~ $(NAME)
 
 oclean:
-	$(RM) -f *.o
+	$(RM) -f $(OBJ)
 
 fclean: clean oclean
 
