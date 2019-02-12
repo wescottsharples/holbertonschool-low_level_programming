@@ -6,38 +6,21 @@ Contains function to count perimeter of an island
 """
 
 
-def check_cell(x, y, matrix):
-    """ Checks if a cell is water or land """
-    try:
-        if matrix[y][x] == 0:
-            return 1
-        else:
-            return 0
-    except IndexError:
-        return 1
-
-
-def count_water(x, y, matrix):
-    """ Counts adjacent cells if water """
-    count = 0
-    """ Check northern cell """
-    count += check_cell(x, y - 1, matrix)
-    """ Check eastern cell """
-    count += check_cell(x + 1, y, matrix)
-    """ Check southern cell """
-    count += check_cell(x, y + 1, matrix)
-    """ Check western cell """
-    count += check_cell(x - 1, y, matrix)
-    print("Count: {}".format(count))
-    return count
-
-
 def island_perimeter(grid):
     """ Returns the island's perimeter """
     perimeter = 0
+    if len(grid) - 1 == 0 or len(grid[0]) -1 == 0:
+        return 0
     matrix = grid.copy()
     for y in range(len(grid)):
         for x in range(len(grid[y])):
             if grid[y][x] == 1:
-                perimeter += count_water(x, y, matrix)
+                if y == len(grid[0]) - 1 or grid[y - 1][x] == 0:
+                    perimeter += 1
+                if x == len(grid) - 1 or grid[y][x + 1] == 0:
+                    perimeter += 1
+                if y == len(grid[0]) - 1 or grid[y + 1][x] == 0:
+                    perimeter += 1
+                if x == len(grid) - 1 or grid[y][x - 1] == 0:
+                    perimeter += 1
     return perimeter
