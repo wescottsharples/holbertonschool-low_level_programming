@@ -14,8 +14,7 @@ def check_cell(x, y, matrix):
         else:
             return 0
     except IndexError:
-        print("Out of range")
-        return 0
+        return 1
 
 
 def count_water(x, y, matrix):
