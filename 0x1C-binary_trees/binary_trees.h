@@ -21,6 +21,7 @@ typedef struct binary_tree_s
 
 /* Helper function prototypes */
 void binary_tree_print(const binary_tree_t *);
+size_t height(const binary_tree_t *tree);
 size_t max(size_t a, size_t b);
 
 /* Core function prototypes */
