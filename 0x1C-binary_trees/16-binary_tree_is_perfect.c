@@ -58,7 +58,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	size_t nodes, exp;
+	size_t nodes, exp = 1;
 
 	if (!tree)
 		return (0);
