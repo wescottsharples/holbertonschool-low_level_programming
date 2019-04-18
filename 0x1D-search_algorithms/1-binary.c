@@ -3,9 +3,9 @@
 /**
  * print_array - Prints an array
  *
- * @array - the array to be printed
- * @low - lower bound of array
- * @high - upper bound of array
+ * @array: the array to be printed
+ * @low: lower bound of array
+ * @high: upper bound of array
  */
 void print_array(int *array, size_t low, size_t high)
 {
